@@ -30,7 +30,9 @@ public class RecommendationService {
         // 여덟번째 소숫점 버림
         double roundedLatitude = Math.floor(latitudeOther*10000000)/10000000.0;
 
-        return roundedLatitude;
+        final double radius = Math.abs(latitude - roundedLatitude);
+
+        return radius;
     }
 
 }

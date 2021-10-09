@@ -24,7 +24,7 @@ class RecommendationServiceTest {
     void calculateRadius() {
         double distanceInput = 1000;
         double latitude = 36.3376482;
-        final double EXPECTED_LATITUDE = 36.3378051;
+        final double EXPECTED_LATITUDE = Math.abs(latitude - 36.3378051);
 
         double returnValue = recommendationService.calculateRadius(distanceInput, latitude);
 
