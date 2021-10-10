@@ -1,16 +1,15 @@
 package com.demo.whatShouldIEatTodayBackProto.dto;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
-import java.util.ArrayList;
 
 /**
- * 2021-10-09
+ * 2021-10-10
+ * 카카오에 ServiceReq를 날릴때 사용되는 DTO
  * 객체 생성시 아래의 파라미터들은 만드는 앱에서 필수로 들어가야 합니다.
  * query, x, y, radius
  * 쿼리문을 저장하는 dto
@@ -44,11 +43,11 @@ public class SearchLocalReq {
         }
 
         if(page != null) {
-            map.add("page", String.valueOf(page));
+            map.add("page", page);
         }
 
         if(size != null) {
-            map.add("size", String.valueOf(size));
+            map.add("size", size);
         }
 
         if(sort != null) {
