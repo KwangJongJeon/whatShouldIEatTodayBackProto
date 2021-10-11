@@ -1,6 +1,12 @@
 package com.demo.whatShouldIEatTodayBackProto.dto;
 
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+@Data
+@Getter @Setter
 public class ResponseMeta {
     private int total_count; // 검색된 문서 수
     private int pageable_count; // total_count 중 노출 가능 문서 수

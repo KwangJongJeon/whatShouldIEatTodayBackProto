@@ -1,6 +1,7 @@
 package com.demo.whatShouldIEatTodayBackProto.controller.api;
 
 import com.demo.whatShouldIEatTodayBackProto.dto.RecommendServiceReq;
+import com.demo.whatShouldIEatTodayBackProto.dto.ResponseDocument;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,13 +20,9 @@ public class LocationController {
     private final RecommendationService recommendationService;
 
     @RequestMapping(value = "/recommend")
-    public <T> String  routeToRecommendService(@RequestBody RecommendServiceReq<T> userData) {
+    public <T> ResponseDocument  routeToRecommendService(@RequestBody RecommendServiceReq<T> userData) {
 
-
-        log.info(userData.getLongitude().toString());
-
-
-        return "OK";
+        return recommendationService.recommendationService(userData);
     }
 }
 

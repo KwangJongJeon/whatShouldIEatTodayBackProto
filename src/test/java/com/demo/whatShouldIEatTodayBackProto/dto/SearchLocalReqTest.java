@@ -34,7 +34,7 @@ class SearchLocalReqTest {
         String x = "1";
         String y = "1";
         String radius = "1000";
-        String page = "10";
+        int page = 10;
 
         SearchLocalReq searchLocalReq = new SearchLocalReq(query, x, y, radius);
         searchLocalReq.setPage(page);
@@ -44,7 +44,7 @@ class SearchLocalReqTest {
         map.add("x", x);
         map.add("y", y);
         map.add("radius", radius);
-        map.add("page", page);
+        map.add("page", String.valueOf(page));
 
         Assertions.assertThat(searchLocalReq.makeMultiValueMap()).isEqualTo(map);
     }

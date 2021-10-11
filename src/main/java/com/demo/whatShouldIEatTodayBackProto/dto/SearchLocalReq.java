@@ -1,5 +1,6 @@
 package com.demo.whatShouldIEatTodayBackProto.dto;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -25,9 +26,11 @@ public class SearchLocalReq {
     private final String radius; // 중심 좌표로부터의 반경거리, 단위 meter 0~20000사이의 값
     private String categoryGroupCode; // 카테고리 그룹 코드, 결과를 카테고리로 필터링을 원하는 경우 사용
     private String rect; // 사각형 범위 내에서 제한 검색을 위한 좌표, 좌측 X좌표, 좌측 Y좌표, 우측X 좌표, 우측 Y좌표 형식
-    private String page; // 결과 페이지 번호 1~45 사이의 값
-    private String size; // 한 페이지에 보여질 문서의 개수 1~15사이의 값
+    private int page; // 결과 페이지 번호 1~45 사이의 값
+    private int  size; // 한 페이지에 보여질 문서의 개수 1~15사이의 값
     private String sort; // 결과 정렬 순서 distance 혹은 accuracy
+
+
 
 
     public MultiValueMap<String, String> makeMultiValueMap() {
@@ -42,12 +45,12 @@ public class SearchLocalReq {
             map.add("rect", rect);
         }
 
-        if(page != null) {
-            map.add("page", page);
+        if(page != 0) {
+            map.add("page", String.valueOf(page));
         }
 
-        if(size != null) {
-            map.add("size", size);
+        if(size != 0) {
+            map.add("size", String.valueOf(size));
         }
 
         if(sort != null) {
