@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 public class RecommendationService {
     private final NaverMapApiClient naverMapApiClient;
 
+    private final KakaoClient kakaoClient;
+
     public void test(String latitude, String longitude) {
         log.info("test API Address: {}, {}", latitude, longitude);
 //        ResponseEntity<String> res = mapApiClient.getAddrFromGpsJsonResult(latitude, longitude);
