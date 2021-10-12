@@ -3,7 +3,6 @@ package com.demo.whatShouldIEatTodayBackProto.service;
 
 import com.demo.whatShouldIEatTodayBackProto.dto.SearchLocalReq;
 import com.demo.whatShouldIEatTodayBackProto.dto.SearchLocalRes;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;

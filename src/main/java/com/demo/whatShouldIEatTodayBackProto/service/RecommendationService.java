@@ -13,7 +13,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class RecommendationService {
-    private final NaverMapApiClient naverMapApiClient;
 
     private final KakaoClient kakaoClient;
 
@@ -42,7 +41,7 @@ public class RecommendationService {
 
         int page = 1;
 
-        while(!responseMeta.is_end() && page < 46) {
+        while(!responseMeta.is_end() && page < 10) {
             SearchLocalReq searchLocalReq = new SearchLocalReq(query, x, y, radius);
             searchLocalReq.setPage(page++);
             SearchLocalRes searchLocalRes = kakaoClient.localSearch(searchLocalReq);
