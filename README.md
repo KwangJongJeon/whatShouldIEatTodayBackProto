@@ -1,6 +1,7 @@
 # 오늘 뭐먹지 프로젝트 개요
 
 - 근처의 식당을 탐색한 뒤 식당을 추천해주는 웹 앱
+- 개발로그: https://kj97.tistory.com/category/%EA%B0%9C%EB%B0%9C%EB%A1%9C%EA%B7%B8/%EC%98%A4%EB%8A%98%EB%AD%90%EB%A8%B9%EC%A7%80%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8
 
 ## 예상 기능
 
@@ -16,5 +17,6 @@
 
 
 ## 현재 구현기능
-![Back](https://user-images.githubusercontent.com/19809346/136498680-f2de9ac6-dfa2-4bbd-aa6c-6affd3cd9556.PNG)
-- 프론트앤드에서 제공된 데이터 중 유저의 경도와 위도를 로그로 찍었습니다.
+
+![랜덤추천결과](https://user-images.githubusercontent.com/19809346/137073525-bf25ab51-4ce2-4f72-b14d-5cead88ccc63.PNG)
+- Kakao API에 유저 정보를 보낸뒤 랜덤으로 추첨 후 나온 결과입니다.
